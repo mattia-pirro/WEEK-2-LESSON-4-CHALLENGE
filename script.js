@@ -127,7 +127,7 @@ console.log(invertiStringa('EPICODE'));
 function inizialiMaiuscole(frase) {
    const newFrase = [];
    const parole = frase.split(' ');
-   for (let i = 0; i < parole.length; i++) {;
+   for (let i = 0; i < parole.length; i++) {
       newFrase.push(parole[i].slice(0, 1).toUpperCase() + parole[i].slice(1));
    }
    return newFrase.join(' ');
@@ -140,6 +140,10 @@ console.log(inizialiMaiuscole('ciao mondo a tutti'));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function togliPrimoEUltimo(testo) {
+   return testo.slice(1, -1);
+}
+console.log(togliPrimoEUltimo('EPICODE'));
 
 /* ESERCIZIO 10 — dammiCasuali
    Funzione dammiCasuali(n): ritorna un array di n numeri interi casuali tra 0 e 10 (inclusi).
@@ -147,6 +151,16 @@ console.log(inizialiMaiuscole('ciao mondo a tutti'));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function dammiCasuali(n){
+   let numeri = [];
+   for (let i = 0; i < n; i++){
+      numeri[i] = Math.floor(Math.random() * 11);
+   }
+   return numeri;
+}
+console.log(dammiCasuali(5));
+console.log(dammiCasuali(10));
+
 
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
