@@ -151,9 +151,9 @@ console.log(togliPrimoEUltimo('EPICODE'));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function dammiCasuali(n){
+function dammiCasuali(n) {
    let numeri = [];
-   for (let i = 0; i < n; i++){
+   for (let i = 0; i < n; i++) {
       numeri[i] = Math.floor(Math.random() * 11);
    }
    return numeri;
@@ -173,3 +173,11 @@ console.log(dammiCasuali(10));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function etaInGiorni(annoNascita, meseNascita, giornoNascita) {
+   let numGiorni;
+   const oggi = new Date();
+   const nascita = new Date(annoNascita, meseNascita - 1, giornoNascita);
+   numGiorni = Math.floor((oggi - nascita) / (((1000 * 60) * 60) * 24));
+   return 'Hai ' + numGiorni + ' giorni';
+}
+console.log(etaInGiorni(2002, 12, 16));
